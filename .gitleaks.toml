@@ -1,0 +1,23 @@
+[allowlist]
+  description = "Global Allowlist"
+
+  # Ignore based on any subset of the file path
+  paths = [
+    # Ignore all example certs
+    # '''\/example.*\.pem$''',
+                
+    # Ignore anything with the word tests/unit anywhere in the path
+    '''tests/unit''',
+    '''community-general-7.4.0''',
+    '''azure-azcollection-1.18.1''',
+    
+
+    # Ignore some long path
+    # '''examples\/some\/long\/path\/server.key$''',
+  ]
+        
+  # Ignore based on any subset of the line
+  regexes = [
+    # Ignore lines containing otp_secret
+    '''otp_secret''',
+  ]
